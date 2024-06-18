@@ -1,5 +1,5 @@
 CREATE TABLE tb_event(
-    id UUID gen_random_uuid() PRIMARY KEY,
+    id BINARY(16) DEFAULT (UUID_TO_BIN(UUID())) PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     description VARCHAR(250) NOT NULL,
     img_url VARCHAR(100) NOT NULL,
